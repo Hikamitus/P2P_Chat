@@ -46,7 +46,7 @@ class Server:
 from threading import Thread
 from os import system
 import socket
-62230443
+
 room = Server(username = 'Server', host = 'localhost', port = 8000);
 room.chat()
 room.sock.close()

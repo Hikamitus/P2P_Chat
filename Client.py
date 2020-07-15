@@ -46,5 +46,5 @@ from threading import Thread, Lock
 from os import system
 import socket
 
-room = Client(username='Client', host='62.83.71.179', port=8000);
+room = Client(username='Client', host='localhost', port=8000);
 room.chat()
