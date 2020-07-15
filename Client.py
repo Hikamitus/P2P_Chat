@@ -18,9 +18,7 @@ class Client:
             return False
     
     def show_msgs(self):
-        try:
-            system('clear');
-        except:
+        if system('clear') == 0:
             system('cls');
         for msg in self.msgs:
             print(msg);
