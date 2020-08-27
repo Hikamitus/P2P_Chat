@@ -20,8 +20,7 @@ class Server:
             return True
     
     def show_msgs(self):
-        if system('clear') == 0:
-            system('cls')
+        os.system('cls' if os.name == 'nt' else 'clear')
         for msg in self.msgs:
             print(msg);
     
@@ -42,9 +41,8 @@ class Server:
             self.msgs.append('You: %s'%(msg));
                     
 from threading import Thread
-from os import system
+import os
 import socket
 
-room = Server(username = 'Server', host = 'localhost', port = 8000);
-room.chat()
-room.sock.close()
+#room = Server(username = 'Server', host = 'localhost', port = 8000);
+#room.chat()

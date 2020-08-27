@@ -18,7 +18,9 @@ class Client:
             return False
     
     def show_msgs(self):
-        os.system('cls' if os.name == 'nt' else 'clear')
+        if not system( 'cls' if os.name == 'nt' else 'clear') == 0:
+            system('cls' if os.name == 'nt' else 'clear');
+        
         for msg in self.msgs:
             print(msg);
     
@@ -40,8 +42,9 @@ class Client:
             self.msgs.append(f'You: {msg}');
 
 from threading import Thread, Lock
+from os import system
 import socket
 import os
 
-#room = Client(username='Client', host='localhost', port=8000);
-#room.chat()
+room = Client(username='Hikami', host='localhost', port=8000);
+room.chat()
